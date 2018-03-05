@@ -9,11 +9,12 @@ MAINTAINER yxy <yxy_linux@163.c0m>
 
 # Set environment variable
 ENV	APP_DIR /app
+RUN     yum install -y   libsystemd-daemon.so.0    libsystemd-id128.so.0  libsystemd-journal.so.0 libsystemd-login.so.0 libudev.so.1  systemd-container-libs
 
 RUN	yum -y install nginx php-cli php-mysql php-pear php-ldap php-mbstring php-soap php-dom php-gd php-xmlrpc php-fpm php-mcrypt && \ 
 	yum clean all
 
-ADD nginx_nginx.conf /etc/nginx/nginx.conf
+ADD     nginx_nginx.conf /etc/nginx/nginx.conf
 ADD	nginx_default.conf /etc/nginx/conf.d/default.conf
 
 ADD	php_www.conf /etc/php-fpm.d/www.conf
