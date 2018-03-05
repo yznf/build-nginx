@@ -4,7 +4,7 @@
 #
 # Dockerizing php-fpm: Dockerfile for building php-fpm images
 #
-FROM       10.10.23.111/yxy/centos:7.1
+FROM       10.10.23.111:5000/yxy/centos:7.1
 MAINTAINER yxy <yxy_linux@163.c0m>
 
 # Set environment variable
